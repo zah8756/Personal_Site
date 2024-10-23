@@ -9,21 +9,13 @@
 </head>
 <body>
     <header>
-        <div  class="logo">
-            <img src="img/devjane.png" alt="picture of zach harwood">
-            <!--curently using a placeholder image -->
-        </div>
 
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
-
-        <nav>  
-            <ul class="navList">
-                <li class="navItem"><a href="#home">Home</a></li>     
-                <li class="navItem"><a href="#services">services</a></li>    
-                <li class="navItem"><a href="#about">about me</a></li>  
-                <li class="navItem"><a href="#projects">projects</a></li>   
+        <nav id="nav">  
+            <ul id="navList">
+                <li class="navItem"><a href="#home" class="navLink">Home</a></li>     
+                <li class="navItem"><a href="#services" class="navLink">services</a></li>    
+                <li class="navItem"><a href="#about" class="navLink">about me</a></li>  
+                <li class="navItem"><a href="#projects" class="navLink">projects</a></li>   
             </ul>
         </nav>
 
@@ -44,26 +36,26 @@
     <!-- This section will be altred to the project section after completing the tutorial-->
 
     <section class="my-services" id="services">
-        <h2 class="sectionTitle" id="sectionServices"> What I do</h2>
+        <h2 class="sectionTitle" id="sectionServices"> My Experiences</h2>
 
         <div class="services">
             <div class="service">
-                <h3> Design and devwork</h3>
+                <h3>Education</h3>
                 <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
 
             <div class="service">
-                <h3>Ecomerce</h3>
+                <h3>Work</h3>
                 <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
 
-            <div class="service">
+            <!-- <div class="service">
                 <h3>Worpress</h3>
                 <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
+            </div> -->
         </div>
         
-        <a href="#work" class="btn">My Work</a>
+        <a href="#projects" class="btn">My Work</a>
     </section>
 
     <!-- Start of about me section -->
@@ -80,8 +72,8 @@
 
     <!-- Start of my projects section -->
     <section class="myPorjects" id="projects">
-        <h2 class="sectionTitle" id="sectionProjects">My projects</h2>
-        <p class="sectionSubtitle" id="proejctSubtitle">my past projects</p>
+        <h2 class="sectionTitle" id="sectionProjects">My work</h2>
+        <p class="sectionSubtitle" id="proejctSubtitle">A secltion of my past proejcts</p>
         <div id="portfolio">
 
              <!-- portfolio item 01 -->
@@ -131,13 +123,12 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="footerSection">
         <a href="mailto:320zach@gmail.com" id="footerLink">320zach@gmail.com</a>
         <ul id="socialList">
-            <li class="socialListItem"><a class="socialListLink" href="#">a</a></li>
-            <li class="socialListItem"><a class="socialListLink" href="#">b</a></li>
-            <li class="socialListItem"><a class="socialListLink" href="#">c</a></li>
-            <li class="socialListItem"><a class="socialListLink" href="#">d</a></li>
+            <li class="socialListItem"><a class="socialListLink" href="#"><i class="fa-brands fa-github"></i></a></li>
+            <li class="socialListItem"><a class="socialListLink" href="mailto:320zach@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+            <li class="socialListItem"><a class="socialListLink" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
         </ul>
     </footer>
 </body>
