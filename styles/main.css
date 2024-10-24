@@ -363,8 +363,7 @@ header{
 #footerSection{
     background: #111;
     color: var(--clr-accent);
-    text-align: center;
-    padding: 2.5em 0 1em;
+    padding: 2.5em 2.5em 1em;
     font-size: var(--fs-h3);
     border-top: var(--clr-accent) 5px solid;
 }
@@ -393,7 +392,7 @@ header{
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -405,3 +404,9 @@ header{
     padding: .5em;
 }
 
+.spacer{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1900px;
+    margin: 0 auto;
+}
