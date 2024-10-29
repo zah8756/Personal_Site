@@ -7,8 +7,11 @@
 /* custom properties */
 :root{
     --clr-light:#eff1ec;
-    --clr-dark:#23022e;
+    --clr-dark:#18051F;
     --clr-accent:#573280;
+
+    --clr-background:#110B1A;
+    --clr-lightText:#E9D9FF;
 
     --fw-reg:300;
     --fw-bold:900;
@@ -107,6 +110,7 @@ h3{font-size:var(--fs-h3);}
 .sectionSubtitle{
     margin: 0;
     font-size: var(--fs-h3);
+    color: var(--clr-lightText);
 }
 
 #introSubtitle,
@@ -117,7 +121,7 @@ h3{font-size:var(--fs-h3);}
 }
 
 #proejctSubtitle{
-    color: var(--clr-accent);
+    color: var(--clr-lightText);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
 }
@@ -222,6 +226,38 @@ header{
 }
 
 
+#introLinks{
+    display: flex;
+    padding: 2em;
+    color: var(--clr-accent);
+    font-size: 1.2rem;
+    
+}
+
+#introLinks a,#introLinks button{
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+#resumeButton{
+    display: flex;
+    gap: 2em;
+    padding: .5em 1em;
+    font-size: inherit;
+    margin: 0 .5em;
+    color: var(--clr-accent);
+    background-color: var(--clr-lightText);
+    border-color: var(--clr-lightText);
+    transition: background-color 250ms linear;
+    border-radius: 15px;
+}
+
+#resumeButton:hover{
+    background-color: var(--clr-accent);
+    color: var(--clr-lightText);
+}
+
 /* My services section */
 /* mostlikey will be updated after the tutorial */
 
@@ -235,7 +271,7 @@ header{
 }
 
 #sectionServices{
-    color: var(--clr-accent);
+    color: var(--);
     position: relative;
 }
 
@@ -361,7 +397,7 @@ header{
 /* footer section */
 
 #footerSection{
-    background: #111;
+    background: var(--clr-background);
     color: var(--clr-accent);
     padding: 2.5em 2.5em 1em;
     font-size: var(--fs-h3);
@@ -388,7 +424,7 @@ header{
     text-decoration: underline;
 }
 
-#socialList{
+.socialList{
     list-style: none;
     display: flex;
     justify-content: center;
@@ -402,6 +438,11 @@ header{
 
 .socialListLink{
     padding: .5em;
+}
+
+#topLinks a{
+    display: flex;
+    font-size: 1.1em
 }
 
 .footSpace{
