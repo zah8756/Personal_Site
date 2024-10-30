@@ -23,6 +23,10 @@
     --fs-body: 1rem;
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
     0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
+    --line: calc(var(--fs-body) * 2);
+    --move: calc(-1 * var(--line));
+    
 }
 
 @media(min-width:800px){
@@ -249,13 +253,15 @@ header{
     color: var(--clr-accent);
     background-color: var(--clr-lightText);
     border-color: var(--clr-lightText);
-    transition: background-color 250ms linear;
+    transition: background-color 250ms linear, border-color 250ms linear;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 #resumeButton:hover{
     background-color: var(--clr-accent);
     color: var(--clr-lightText);
+    border-color: var(--clr-accent);
 }
 
 /* My services section */
@@ -373,14 +379,15 @@ header{
     background: var(--clr-accent);
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
+    text-decoration: none;
+
 }
 
-.portfolioImg{
+.portfolioImg,.projectContainer{
     transition: 
     transform 750ms cubic-bezier(.5,0,.5,1),
     opacity 250ms linear;
-    
-
 }
 
 .portfolioItem:focus{
@@ -392,6 +399,25 @@ header{
 .portfolioItem:focus .portfolioImg{
     transform: scale(1.2);
     opacity: .50;
+}
+
+.itemName{ 
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.projectContainer{
+    display:grid;
+    place-items: center;
+}
+
+.itemName,.portfolioImg{
+    grid-row: 1;
+    grid-column: 1;
 }
 
 /* footer section */
