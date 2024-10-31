@@ -277,7 +277,7 @@ header{
 }
 
 #sectionServices{
-    color: var(--);
+    color: var(--clr-light);
     position: relative;
 }
 
@@ -403,11 +403,23 @@ header{
 
 .itemName{ 
     color: white;
+    display: block;
     margin: 0;
     font-size: 2rem;
     font-weight: bold;
     z-index: 1000;
     pointer-events: none;
+    max-width: 380px;
+    overflow-wrap: break-word;
+}
+
+.itemName::after{
+    content: '';
+    display: block;
+    height: 3px;
+    /* margin: 0 auto 1em ; */
+    background: var(--clr-light);
+    /* opacity: 0.5; */
 }
 
 .projectContainer{
