@@ -6,12 +6,17 @@
 
 /* custom properties */
 :root{
+
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
     --clr-light:#eff1ec;
     --clr-dark:#18051F;
     --clr-accent:#573280;
 
     --clr-background:#110B1A;
     --clr-lightText:#E9D9FF;
+    --clr-darker:#1C1327;
 
     --fw-reg:300;
     --fw-bold:900;
@@ -44,8 +49,8 @@
 html{scroll-behavior: smooth;}
 
 body{
-    background-color:var(--clr-light) ;
-    color: var(--clr-dark);
+    background-color:var(--clr-background) ;
+    color: var(--clr-lightText);
     margin: 0;
     font-size: var(--fs-body);
     line-height: 1.6;
@@ -194,8 +199,11 @@ header{
 
 #introImage{
  box-shadow: var(--bs);
+ margin-bottom:2em;
+}
 
-
+#introSubtitle{
+    display: inline-block;
 }
 
 @media(min-width: 600px){
@@ -215,6 +223,7 @@ header{
         min-width: 250px;
         position: relative;
         z-index: 2;
+       
     }
 
     #introSubtitle{
@@ -232,10 +241,10 @@ header{
 
 #introLinks{
     display: flex;
-    padding: 2em;
+    padding: 0 2em;
     color: var(--clr-accent);
     font-size: 1.2rem;
-    
+    justify-content: center;
 }
 
 #introLinks a,#introLinks button{
@@ -320,6 +329,7 @@ header{
 .aboutMe{
     max-width: 1000px;
     margin: 0 auto;
+    margin-bottom:2em;
 }
 
 #aboutImg{
@@ -362,7 +372,7 @@ header{
 /* projects section */
 
 .myPorjects{
-    background-color: var(--clr-dark);
+    background-color: var(--clr-background);
     color: var(--clr-light);
     text-align: center;
 }
@@ -435,9 +445,9 @@ header{
 /* footer section */
 
 #footerSection{
-    background: var(--clr-background);
+    background: #0E0F0C;
     color: var(--clr-accent);
-    padding: 2.5em 2.5em 1em;
+    padding: 1.5em 2.5em 1em;
     font-size: var(--fs-h3);
     border-top: var(--clr-accent) 5px solid;
 }
@@ -468,10 +478,7 @@ header{
     justify-content: center;
     margin: 0;
     padding: 0;
-}
-
-.socialListItem{
-    margin: 0 .5em;
+    gap:1rem;
 }
 
 .socialListLink{
