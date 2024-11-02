@@ -7,8 +7,8 @@
 /* custom properties */
 :root{
 
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-primary:'Poppins', sans-serif;
+    --ff-secondary: 'Pragati Narrow', sans-serif;
 
     --clr-light:#eff1ec;
     --clr-dark:#18051F;
@@ -54,6 +54,7 @@ body{
     margin: 0;
     font-size: var(--fs-body);
     line-height: 1.6;
+    font-family: var(--ff-primary);
 }
 
 section{
@@ -126,6 +127,8 @@ h3{font-size:var(--fs-h3);}
 #aboutSubtitle{
     background: var(--clr-accent);
     padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
     margin-bottom: 1em;
 }
 
@@ -163,6 +166,7 @@ header{
     justify-content: center;
     margin: 0 auto;
     gap: 2em;
+    padding: 0;
     
  
 }
@@ -214,7 +218,8 @@ header{
         column-gap:1em;
         grid-template-areas: 
             "img title"
-            "img subtitle";
+            "img subtitle"
+            "link link";
         grid-template-columns: min-content max-content;
     }
 
@@ -240,11 +245,12 @@ header{
 
 
 #introLinks{
+    grid-area: link;
     display: flex;
-    padding: 0 2em;
+    padding: 0 ;
     color: var(--clr-accent);
     font-size: 1.2rem;
-    justify-content: center;
+    align-self: start;
 }
 
 #introLinks a,#introLinks button{
@@ -280,6 +286,7 @@ header{
     background-color: var(--clr-dark);
     background-image: url(../img/services-bg.jpg);
     background-size:cover;
+    /* background-size: 100%; */
     /* background-blend-mode:multiply; */
     color: var(--clr-light);
     text-align: center;
