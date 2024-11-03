@@ -24,13 +24,11 @@
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
+    --fs-itemName:1.75rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
     0.125em 0.125em 0.25em rgba(0,0,0,.15);
-
-    --line: calc(var(--fs-body) * 2);
-    --move: calc(-1 * var(--line));
     
 }
 
@@ -39,6 +37,7 @@
     :root{
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
+        --fs-itemName:2rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
     }
@@ -148,13 +147,14 @@ header{
     position: sticky;
     top: 0;
     z-index: 100;
-    
+   
 }
 
 #nav{
     backdrop-filter: blur(5px);
     color: var(--clr-dark);
     background-color: #eff1ec6e;
+    min-width: 810px;
     /* padding: 0 2em; */
 
 }
@@ -192,6 +192,9 @@ header{
     }
     header{
         position: static;
+    }
+    #nav{
+        min-width: initial;
     }
 }
 
@@ -233,7 +236,6 @@ header{
 
     #introSubtitle{
         align-self: start;
-        grid-column: -1/1;
         grid-row: 2;
         text-align: right;
         position: relative;
@@ -271,6 +273,8 @@ header{
     transition: background-color 250ms linear, border-color 250ms linear;
     border-radius: 15px;
     cursor: pointer;
+    /* font-family: var(--ff-secondary); */
+    align-items: center;
 }
 
 #resumeButton:hover{
@@ -293,7 +297,7 @@ header{
 }
 
 #sectionServices{
-    color: var(--clr-light);
+    color: var(--clr-lightText);
     position: relative;
 }
 
@@ -386,10 +390,10 @@ header{
 
 #portfolio{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
-    max-width: 2000px;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    max-width: 1400px;
     margin: 0 auto;
-    gap: 1em;
+    gap: .5em;
 }
 
 .portfolioItem{
@@ -420,14 +424,14 @@ header{
 
 .itemName{ 
     color: white;
-    display: block;
+    display: inline-block;
     margin: 0;
-    font-size: 2rem;
+    font-size: var(--fs-itemName);
     font-weight: bold;
-    z-index: 1000;
     pointer-events: none;
+
     max-width: 380px;
-    overflow-wrap: break-word;
+   
 }
 
 .itemName::after{
@@ -439,12 +443,25 @@ header{
     /* opacity: 0.5; */
 }
 
+.techContainer{
+    pointer-events: none;
+    display: inline-block;
+    z-index: 1000;
+    max-width: 380px;
+    overflow-wrap: wrap;
+}
+
+.techItems{
+    display: flex;
+    gap: 2em;
+}
+
 .projectContainer{
     display:grid;
     place-items: center;
 }
 
-.itemName,.portfolioImg{
+.techContainer,.portfolioImg{
     grid-row: 1;
     grid-column: 1;
 }
