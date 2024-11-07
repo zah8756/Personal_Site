@@ -18,6 +18,17 @@
     --clr-lightText:#E9D9FF;
     --clr-darker:#1C1327;
 
+    /* tech colors */
+    --clr-js:#f7df1e;
+    --clr-angular:#c3002f;
+    --clr-react:#61dafb;
+    --clr-figma:#24ce85;
+    --clr-swift:#fc9039;
+    --clr-cSharp:#;
+    --clr-MongoDB:#024764;
+    --clr-nodeJS:#6fa760;
+
+
     --fw-reg:300;
     --fw-bold:900;
 
@@ -152,9 +163,9 @@ header{
 
 #nav{
     backdrop-filter: blur(5px);
-    color: var(--clr-dark);
-    background-color: #eff1ec6e;
-    min-width: 810px;
+    color: var(--clr-lightText);
+    background-color:#110b1ab9;
+    min-width: 812px;
     /* padding: 0 2em; */
 
 }
@@ -222,7 +233,9 @@ header{
         grid-template-areas: 
             "img title"
             "img subtitle"
-            "link link";
+            "about about"
+            "link link"
+            ;
         grid-template-columns: min-content max-content;
     }
 
@@ -245,6 +258,10 @@ header{
 
 }
 
+#about{
+    grid-area: about;
+    max-width: 800px;
+}
 
 #introLinks{
     grid-area: link;
@@ -266,7 +283,7 @@ header{
     gap: 2em;
     padding: .5em 1em;
     font-size: inherit;
-    margin: 0 .5em;
+    /* margin: 0 .5em; */
     color: var(--clr-accent);
     background-color: var(--clr-lightText);
     border-color: var(--clr-lightText);
@@ -419,7 +436,7 @@ header{
 .portfolioImg:hover,
 .portfolioItem:focus .portfolioImg{
     transform: scale(1.2);
-    opacity: .50;
+    opacity: .40;
 }
 
 .itemName{ 
@@ -438,7 +455,7 @@ header{
     content: '';
     display: block;
     height: 3px;
-    /* margin: 0 auto 1em ; */
+    margin-bottom: .2em;
     background: var(--clr-light);
     /* opacity: 0.5; */
 }
@@ -448,12 +465,22 @@ header{
     display: inline-block;
     z-index: 1000;
     max-width: 380px;
-    overflow-wrap: wrap;
 }
 
 .techItems{
     display: flex;
-    gap: 2em;
+    gap: .5em;
+    flex-wrap: wrap;
+   
+
+}
+
+.tech{
+    padding: .2em 1em;
+    border: 3px solid red;
+    border-radius: 900px;
+    margin: 0 ;
+    color: var(--clr-lightText);
 }
 
 .projectContainer{
@@ -540,4 +567,30 @@ header{
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* technology section */
+
+.javaColor{
+    border-color: var(--clr-js);
+}
+
+.figmaColor{
+    border-color:var(--clr-figma) ;
+}
+
+.angularColor{
+    border-color: var(--clr-angular);
+}
+
+.reactColor{
+    border-color: var(--clr-react);
+}
+
+.mongoColor{
+    border-color: var(--clr-MongoDB);
+}
+
+.swiftColor{
+    border-color: var(--clr-swift);
 }
