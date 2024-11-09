@@ -27,7 +27,7 @@
     --clr-cSharp:#;
     --clr-MongoDB:#024764;
     --clr-nodeJS:#6fa760;
-
+    --clr-socketIO:#25c2a0; 
 
     --fw-reg:300;
     --fw-bold:900;
@@ -422,10 +422,11 @@ header{
 
 }
 
-.portfolioImg,.projectContainer{
+.portfolioImg,.projectContainer,.portfolioItem .techContainer{
     transition: 
     transform 750ms cubic-bezier(.5,0,.5,1),
-    opacity 250ms linear;
+    opacity 250ms linear,
+    visibility 250ms;
 }
 
 .portfolioItem:focus{
@@ -445,10 +446,7 @@ header{
     margin: 0;
     font-size: var(--fs-itemName);
     font-weight: bold;
-    pointer-events: none;
-
-    max-width: 380px;
-   
+    width: max-content;
 }
 
 .itemName::after{
@@ -462,30 +460,51 @@ header{
 
 .techContainer{
     pointer-events: none;
-    display: inline-block;
     z-index: 1000;
-    max-width: 380px;
+    display: grid;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    place-items: center;
+    /* max-width: 300px; */
+    /* visibility: hidden;
+    opacity: 0; */
+}
+
+/* .techContainer > p{
+    flex: 1;
+} */
+
+
+.portfolioItem:hover .techContainer,
+.portfolioItem:focus .techContainer
+{
+    visibility: visible;
+    opacity: 1;
 }
 
 .techItems{
     display: flex;
-    gap: .5em;
+    gap: .3em .2em;
     flex-wrap: wrap;
-   
-
+    max-width: 300px;
+    justify-content: center;
 }
 
 .tech{
     padding: .2em 1em;
     border: 3px solid red;
     border-radius: 900px;
-    margin: 0 ;
+    margin: 0;
     color: var(--clr-lightText);
+    font-size: .8em;
 }
 
 .projectContainer{
     display:grid;
     place-items: center;
+    grid-template-rows: 1fr ;
 }
 
 .techContainer,.portfolioImg{
