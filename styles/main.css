@@ -24,10 +24,11 @@
     --clr-react:#61dafb;
     --clr-figma:#24ce85;
     --clr-swift:#fc9039;
-    --clr-cSharp:#;
     --clr-MongoDB:#024764;
     --clr-nodeJS:#6fa760;
     --clr-socketIO:#25c2a0; 
+    --clr-php:#8993be;
+    --clr-git:#f1502f;
 
     --fw-reg:300;
     --fw-bold:900;
@@ -297,6 +298,122 @@ header{
     background-color: var(--clr-accent);
     color: var(--clr-lightText);
     border-color: var(--clr-accent);
+}
+
+/* My Skills section */
+
+.mySkills{
+    color: var(--clr-light);
+    text-align: center;
+    
+}
+
+#sectionSkills{
+    text-align: center;
+    color: var(--clr-lightText);
+}
+
+
+#sectionSkills::after{
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1rem ;
+    background: var(--clr-light);
+    opacity: 0.5;
+}
+
+#skillWraper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.skill{
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    border: 1px solid #5F615B;
+    border-radius: .75rem;
+    transition: all;
+    transition-timing-function: cubic-bezier(.5,.2,.5,1);
+    transition-duration:.4s ;
+}
+
+.skill:hover, .skill:hover svg{
+    fill: var(--clr-lightText);
+    border-color: var(--clr-lightText);
+}
+
+#skillJavascript:hover, #skillJavascript:hover svg{
+    fill: var(--clr-js);
+    border-color: var(--clr-js);
+}
+
+#skillReact:hover, #skillReact:hover svg{
+    fill: var(--clr-react);
+    border-color: var(--clr-react);
+}
+
+#skillAngular:hover, #skillAngular:hover svg{
+    fill: var(--clr-angular);
+    border-color: var(--clr-angular);
+}
+
+#skillPhp:hover, #skillPhp:hover svg{
+    fill: var(--clr-php);
+    border-color: var(--clr-php);
+}
+
+#skillFigma:hover, #skillFigma:hover svg{
+    fill: var(--clr-figma);
+    border-color: var(--clr-figma);
+}
+
+#skillGit:hover, #skillGit:hover svg{
+    fill: var(--clr-git);
+    border-color: var(--clr-git);
+}
+
+
+.skillContainer{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.skillImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+
+}
+
+.skillText{
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+    align-items: start;
+    margin-top: 5%;
+}
+
+.skillText p{
+    margin: 0;
+    color: #b2b4adc4;
+    font-family: var(--ff-secondary);
+}
+
+svg{
+    fill: var(--clr-light);
+    width: 3em;
+    height: 100%;
 }
 
 /* My services section */
