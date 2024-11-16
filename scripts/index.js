@@ -1,4 +1,16 @@
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
+
+  const navToggle = document.querySelector('#check');
+  const navLinks = document.querySelectorAll('.navLink');
+
+  navLinks.forEach(link =>{
+    link.addEventListener('click', () =>{
+      navToggle.checked = false;
+    })
+  })
     // Select all elements with the class 'tech'
     const techElements = document.querySelectorAll('.tech');
 
@@ -15,3 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
