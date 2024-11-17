@@ -24,7 +24,7 @@
     --clr-react:#61dafb;
     --clr-figma:#24ce85;
     --clr-swift:#fc9039;
-    --clr-MongoDB:#024764;
+    --clr-MongoDB:#027aad;
     --clr-nodeJS:#6fa760;
     --clr-socketIO:#25c2a0; 
     --clr-php:#8993be;
@@ -283,7 +283,9 @@ header{
 
 #introSubtitle{
     display: inline-block;
+    
 }
+
 
 @media(min-width: 600px){
     .intro{
@@ -313,15 +315,25 @@ header{
         grid-row: 2;
         text-align: right;
         position: relative;
-        left: -1.5em;
+        left: -1em;
         width: calc(100% + 1.5em);
     }
 
 }
 
+@media(max-width: 800px){
+    #introSubtitle{
+        left: -9.5em;
+    }
+}
+
 #about{
     grid-area: about;
     max-width: 800px;
+    padding-bottom: 2em;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 0;
 }
 
 #introLinks{
@@ -706,6 +718,10 @@ svg{
     visibility 250ms;
 }
 
+.portfolioImg{
+    max-height: 480px;
+}
+
 .portfolioItem:focus{
     position: relative;
     z-index: 2;
@@ -714,7 +730,7 @@ svg{
 .portfolioItem:hover .portfolioImg,
 .portfolioItem:focus .portfolioImg{
     transform: scale(1.2);
-    opacity: .40;
+    opacity: .25;
 
 }
 
@@ -915,4 +931,8 @@ margin-left: 1em;
 
 .swiftColor{
     border-color: var(--clr-swift);
+}
+
+.phpColor{
+    border-color:var(--clr-php) ;
 }
