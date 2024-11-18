@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/66a50df515.js" crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <i class="fa-solid fa-x" id="close-icon"></i>
+        </label>
+
+        <nav id="nav">  
+            <ul id="navList">
+                <li class="navItem"><a href="index.html" class="navLink">Home</a></li>     
+                <li class="navItem"><a href="index.html#skills" class="navLink">Skills</a></li>    
+                <li class="navItem"><a href="index.html#history" class="navLink">History</a></li>  
+                <li class="navItem"><a href="index.html#projects" class="navLink">Projects</a></li>   
+            </ul>
+        </nav>
+
+    </header> 
+
+    <!-- Start of introduction section -->
+    <section class="intro" id="home">
+        <h1 class="sectionTitle" id="sectionIntro">
+            <strong>Rock Paper<br> Showdown</strong>
+        </h1>
+        <p class="sectionSubtitle" id="introSubtitle">The final project of my undergrad</p>
+        <img src="img/RPS.png" alt="picture of portfolio site" id="introImage">
+        <section id="introLinks" class="techIndi">
+            <a href="/Personal_Site/resume.pdf">
+                <button id="resumeButton">
+                    <span>Source Code</span>
+                    <i class="fa-brands fa-github"></i>
+                </button>
+            </a>
+            <div class="techItems pTech">
+                <p class="tech javaColor">Javascript</p>
+                <p class="tech reactColor">React</p>
+                <p class="tech mongoColor">MongoDB</p>
+            </div>
+        </section>
+    </section>    
+
+    <section class="portfolioItemIndividual">
+        <div class="portfolioDetails">
+            <p>This proejct main theme was keep it simple stupid.</p>
+            <p>The majority of this site was built using basic HTML and CSS. It's been some time since I worked on anything significant, and I took this opportunity to deepen my understanding of what it takes to create a website. JavaScript was used minimally for some artistic enhancements.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footerSection">
+        <div class="spacer">
+            <div class="footSpace">
+                <p id="footDate">&#169 2024</p>
+                <a href="#" id="footerLink">ZachH.com</a>
+            </div>
+            <ul class="socialList">
+                <li class="socialListItem"><a class="socialListLink" href="https://github.com/zah8756"><i class="fa-brands fa-github"></i></a></li>
+                <li class="socialListItem"><a class="socialListLink" href="mailto:320zach@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                <li class="socialListItem"><a class="socialListLink" href="https://www.linkedin.com/in/zachary-harwood-4a5586299/"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

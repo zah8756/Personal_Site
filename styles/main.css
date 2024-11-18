@@ -60,16 +60,21 @@
 html{scroll-behavior: smooth;}
 
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
     background-color:var(--clr-background) ;
     color: var(--clr-lightText);
     margin: 0;
     font-size: var(--fs-body);
     line-height: 1.6;
     font-family: var(--ff-primary);
+    overflow-x: hidden;
 }
 
 section{
-    padding:  5em 2em;
+    padding:  5rem 2rem;
 }
 
 img{
@@ -157,7 +162,7 @@ header{
     justify-content: center;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 9999;
    
 }
 
@@ -179,7 +184,7 @@ header{
     width: 100%;
     justify-content: center;
     margin: 0 auto;
-    gap: 4em;
+    gap: 4rem;
     padding: 0;
     
  
@@ -190,7 +195,7 @@ header{
     font-weight: var(--fw-bold);
     font-size: var(--fs-h3);
     text-decoration: none;
-    padding: .5em;
+    padding: .5rem;
 
 }
 
@@ -198,7 +203,7 @@ header{
     color: var(--clr-accent);
 }
 .navItem{
-    padding: 1em;
+    padding: 1rem;
 }
 
 #check {
@@ -213,7 +218,7 @@ header{
     color: #fff;
     cursor: pointer;
     display: none;
-    top:1em;
+    top:1rem;
     z-index: 9999;
 }
 
@@ -323,7 +328,7 @@ header{
 
 @media(max-width: 800px){
     #introSubtitle{
-        left: -9.5em;
+        left: -3.5em;
     }
 }
 
@@ -348,6 +353,7 @@ header{
 #introLinks a,#introLinks button{
     color: inherit;
     text-decoration: none;
+    width: fit-content;
     
 }
 
@@ -449,6 +455,11 @@ header{
 #skillGit:hover, #skillGit:hover svg{
     fill: var(--clr-git);
     border-color: var(--clr-git);
+}
+
+#skillSwift:hover, #skillSwift:hover svg{
+    fill: var(--clr-swift);
+    border-color: var(--clr-swift);
 }
 
 
@@ -741,10 +752,12 @@ svg{
     margin: 0;
     font-size: var(--fs-itemName);
     font-weight: bold;
-    width: max-content;
+
     align-self: flex-end;
-    
-    
+}
+
+.rockPaper{
+    width: min-content;
 }
 
 .itemName::after{
@@ -817,6 +830,8 @@ svg{
 /* footer section */
 
 #footerSection{
+
+    width: 100%;
     background: #0E0F0C;
     color: var(--clr-accent);
     padding: 1.5em 2.5em 1em;
@@ -935,4 +950,34 @@ margin-left: 1em;
 
 .phpColor{
     border-color:var(--clr-php) ;
+}
+
+/*indivual projects*/
+
+.portfolioItemIndividual{
+    padding: 0 2rem 2rem;
+    max-width: 740px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+.portfolioItemIndividual p{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.techIndi{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+
+.techIndi .techItems{
+    justify-content: left;
+}
+
+.pTech{
+max-width: 400px;
 }
