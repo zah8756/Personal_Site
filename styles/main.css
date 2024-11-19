@@ -516,59 +516,6 @@ svg{
     height: 100%;
 }
 
-/* My services section */
-/* mostlikey will be updated after the tutorial */
-/*
-.my-services{
-    background-color: var(--clr-dark);
-    background-image: url(../img/services-bg.jpg);
-    background-size:cover;
-    background-size: 100%; 
-     background-blend-mode:multiply;
-    color: var(--clr-light);
-    text-align: center;
-}
-
-#sectionServices{
-    color: var(--clr-lightText);
-    position: relative;
-}
-
-#sectionServices::after{
-    content: '';
-    display: block;
-    width: 2em;
-    height: 1px;
-    margin: 0.5em auto 1em ;
-    background: var(--clr-light);
-    opacity: 0.5;
-}
-
-.services{
-    margin-bottom: 4em;
-}
-
-.service{
-    max-width: 500px;
-    margin: 0 auto;
-
-}
-
-@media (min-width:800px){
-    .services{
-        display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-        column-gap: 2em;
-    }
-    /* .service+.service{
-       margin-left: 2em;
-    } */
-
-
-
-
 /* History section */
 .my-history{
     color: var(--clr-light);
@@ -654,50 +601,6 @@ svg{
     line-height: 1.75rem;
     margin: 10px 0;
 }
-
-/* About me section */
-/* .aboutMe{
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-bottom:2em;
-}
-
-#aboutImg{
-    box-shadow: var(--bs);
-  
-}
-
-@media (min-width:600px){
-    .aboutMe{
-        display: grid;
-        grid-template-columns: 1fr 200px;
-        grid-template-areas:
-        "title img"
-        "subtitle img"
-        "text img";
-        column-gap: 2em;
-    }
-
-    #sectionAbout{
-        grid-area:title;
-    }
-
-   #aboutSubtitle{
-        grid-column: 1/-1;
-        grid-row: 2;
-        position: relative;
-        left: -1em;
-        width: calc(100% + 2em);
-        padding-left: 1em;
-        padding-right: calc(200px + 4em);
-   }
-
-    #aboutImg{
-        grid-area: img;
-        position: relative;
-        z-index: 2;
-    }
-} */
 
 /* projects section */
 
@@ -862,11 +765,6 @@ svg{
     text-decoration: none;
 }
 
-#footerLink{
- 
-    font-family: var(--fw-bold);
-}
-
 #footerLink:hover,
 .socialListLink:hover{
     opacity: .7;
@@ -996,5 +894,5 @@ margin-left: 1em;
 }
 
 .pTech{
-max-width: 400px;
+    max-width: 400px;
 }
