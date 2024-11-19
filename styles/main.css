@@ -140,7 +140,8 @@ h3{font-size:var(--fs-h3);}
 }
 
 #introSubtitle,
-#aboutSubtitle{
+#aboutSubtitle,
+#pSubtitle{
     background: var(--clr-accent);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
@@ -291,6 +292,10 @@ header{
     
 }
 
+#pSubtitle{
+    display: inline-block;
+}
+
 
 @media(min-width: 600px){
     .intro{
@@ -300,12 +305,15 @@ header{
         column-gap:1em;
         grid-template-areas: 
             "img title"
-            "img subtitle"
+            "img title"
             "about about"
             "link link"
             ;
         grid-template-columns: min-content max-content;
+        min-width: 740px;
     }
+
+    
 
     #introImage{
         grid-area: img;
@@ -324,11 +332,19 @@ header{
         width: calc(100% + 1.5em);
     }
 
+    #pSubtitle{
+        align-self: start;
+        grid-row: 2;
+        /* text-align: right; */
+        position: relative;
+        width: 100%;
+    }
+
 }
 
 @media(max-width: 800px){
     #introSubtitle{
-        left: -3.5em;
+        left: -8.5em;
     }
 }
 
@@ -358,6 +374,7 @@ header{
 }
 
 #resumeButton{
+    border-style:solid;
     display: flex;
     gap: 2rem;
     padding: .5rem 1rem;
