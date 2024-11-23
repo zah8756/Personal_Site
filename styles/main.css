@@ -597,6 +597,10 @@ svg{
     font-family: var(--ff-secondary);
 }
 
+.eduInfo h3{
+    padding-right: 1.5rem;
+}
+
 .eduInfo li{
     padding-right: 2.5rem;
     line-height: 1.75rem;
