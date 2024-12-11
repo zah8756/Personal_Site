@@ -362,12 +362,12 @@ header{
     grid-area: link;
     display: flex;
     padding: 0 ;
-    color: var(--clr-accent);
+    color: var(--clr-lightText);
     font-size: 1.2rem;
     align-self: start;
 }
 
-#introLinks a,#introLinks button{
+#introLinks a{
     color: inherit;
     text-decoration: none;
     width: fit-content;
@@ -379,7 +379,7 @@ header{
     display: flex;
     gap: 2rem;
     padding: .5rem 1rem;
-    font-size: inherit;
+    font-size: var(--fs-body);
     color: var(--clr-accent);
     background-color: var(--clr-lightText);
     border-color: var(--clr-lightText);
@@ -757,8 +757,8 @@ svg{
 #footerSection{
 
     width: 100%;
-    background: #0E0F0C;
-    color: var(--clr-accent);
+    background: #1a1919;
+    /* color: var(--clr-accent); */
     padding: 1.5em 2.5em 1em;
     font-size: var(--fs-h3);
     border-top: var(--clr-accent) 5px solid;
