@@ -367,11 +367,14 @@ header{
     align-self: start;
 }
 
-#introLinks a{
+#introLinks a {
     color: inherit;
     text-decoration: none;
     width: fit-content;
-    
+}
+
+#introLinks button{
+    width: fit-content;
 }
 
 #resumeButton{
